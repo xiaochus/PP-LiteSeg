@@ -1,10 +1,10 @@
 "data_path": "/mnt/e/dataset/cityscapes"
 "class_num": 20
-"input_size": [512, 1024]
+"input_size": [256, 512]
 "mean": [0, 0, 0]
 "std": [1, 1, 1]
 "lr": 0.001
-"epochs": 200
-"batch_size": 2
+"epochs": 500
+"batch_size": 4
 "pretrain": ""
 "checkpoints_path": "checkpoints"

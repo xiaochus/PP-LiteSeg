@@ -30,6 +30,5 @@ def prepreocess(img, size, mean=[0, 0, 0], std=[1, 1, 1]):
     pimg = pimg / std
     pimg = np.transpose(pimg, [2, 0, 1])
     #pimg = np.expand_dims(pimg, axis=0)
-    pimg = torch.from_numpy(pimg).float()
 
     return pimg

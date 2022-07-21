@@ -227,4 +227,5 @@ if __name__ == '__main__':
     model.to('cuda')
     x = torch.zeros((1, 3, 512, 1024)).cuda()
     y = model(x)
-    print(y.size())
+    mask = torch.argmax(y, dim=1).cpu().numpy()
+    print(mask.shape)

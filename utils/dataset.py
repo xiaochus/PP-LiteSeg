@@ -41,7 +41,7 @@ class SegDataset(Dataset):
         mask = cv2.resize(mask, (self.size[1], self.size[0]), interpolation=cv2.INTER_NEAREST)
         mask[mask == 255] = 19
 
-        return img, torch.from_numpy(mask).long()
+        return torch.from_numpy(img).float(), torch.from_numpy(mask).long()
 
     def __len__(self):
        return len(self.img_paths)
